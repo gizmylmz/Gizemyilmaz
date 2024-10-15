@@ -5,70 +5,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Masal Hikayesi</title>
-    <link rel="stylesheet" href="styles.css">
+    <!-- CSS olmadan tasarım iyileştirmeleri için inline stil kullanacağız -->
 </head>
 
-<body>
-    <header>
-        <h1>Tavşan Hikayesi</h1>
+<body style="font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f0f8ff;">
+
+    <header style="background-color: #4CAF50; color: white; padding: 20px 0; text-align: center;">
+        <h1 style="margin: 0;">Tavşan Hikayesi</h1>
         <nav>
-            <ul>
-                <li><a href="#bolum1">Bölüm 1: Ormanın Sırları</a></li>
-                <li><a href="#bolum2">Bölüm 2: Cesur Tavşan</a></li>
-                <li><a href="#bolum3">Bölüm 3: Gizemli Göl</a></li>
-                <li><a href="#bolum4">Bölüm 4: Arkadaşlık</a></li>
+            <ul style="list-style: none; padding: 0; margin: 10px 0; display: flex; justify-content: center; gap: 20px;">
+                <li><a href="#bolum1" style="color: white; text-decoration: none; font-weight: bold;">Bölüm 1</a></li>
+                <li><a href="#bolum2" style="color: white; text-decoration: none; font-weight: bold;">Bölüm 2</a></li>
+                <li><a href="#bolum3" style="color: white; text-decoration: none; font-weight: bold;">Bölüm 3</a></li>
+                <li><a href="#bolum4" style="color: white; text-decoration: none; font-weight: bold;">Bölüm 4</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <section id="bolum1">
-            <h2>Ormanın Sırları</h2>
+    <main style="padding: 20px;">
+        <section id="bolum1" style="background-color: #ffffff; padding: 20px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+            <h2 style="color: #333333;">Bölüm 1: Ormanın Sırları</h2>
             <img src="https://images.unsplash.com/photo-1578924824780-b7c49930e310?q=80&w=1976&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                alt="Büyülü bir orman manzarası" width="600" height="400" />
-            <p>Bir varmış bir yokmuş, uzak bir ülkede büyük bir orman varmış. Bu ormanda hayvanlar ve bitkiler bir arada yaşarmış. Herkes bu ormanın sırlarını merak edermiş.</p>
-            <figure>
-                <figcaption>Bölüm 1 dinle:</figcaption>
-                <audio controls>
+                alt="Orman" width="600" height="400" style="display: block; margin: 10px auto; border-radius: 8px;" />
+            <p style="color: #555555; line-height: 1.6;">Bir varmış bir yokmuş, uzak bir ülkede büyük bir orman varmış. Bu ormanda hayvanlar ve bitkiler bir arada yaşarmış. Herkes bu ormanın sırlarını merak edermiş.</p>
+            <figure style="text-align: center;">
+                <figcaption style="color: #333333; margin-bottom: 10px;">Bölüm 1 dinle:</figcaption>
+                <audio controls style="width: 100%; max-width: 600px;">
                     <source src="/media/cc0-audio/t-rex-roar.mp3" type="audio/mp3">
                     Tarayıcınız audio etiketini desteklemiyor. <a href="/media/cc0-audio/t-rex-roar.mp3">Ses dosyasını indir</a>.
                 </audio>
             </figure>
         </section>
 
-        <section id="bolum2">
-            <h2>Cesur Tavşan</h2>
-            <img src="https://img.freepik.com/premium-vector/rabbit-king-esport-mascot-logo_408559-52.jpg" alt="Cesur tavşan çizimi" />
-            <p>Ormanın en cesur hayvanı tavşanmış. Herkes onun cesaretine hayran kalırmış. Bir gün, tavşan ormanın derinliklerine gitmeye karar vermiş.</p>
-            <figure>
-                <figcaption>Bölüm 2 dinle:</figcaption>
-                <audio controls>
+        <section id="bolum2" style="background-color: #ffffff; padding: 20px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+            <h2 style="color: #333333;">Bölüm 2: Cesur Tavşan</h2>
+            <img src="https://img.freepik.com/premium-vector/rabbit-king-esport-mascot-logo_408559-52.jpg" alt="Cesur Tavşan" width="600" height="400"
+                style="display: block; margin: 10px auto; border-radius: 8px;" />
+            <p style="color: #555555; line-height: 1.6;">Ormanın en cesur hayvanı tavşanmış. Herkes onun cesaretine hayran kalırmış. Bir gün, tavşan ormanın derinliklerine gitmeye karar vermiş.</p>
+            <figure style="text-align: center;">
+                <figcaption style="color: #333333; margin-bottom: 10px;">Bölüm 2 dinle:</figcaption>
+                <audio controls style="width: 100%; max-width: 600px;">
                     <source src="/media/cc0-audio/t-rex-roar.mp3" type="audio/mp3">
                     Tarayıcınız audio etiketini desteklemiyor. <a href="/media/cc0-audio/t-rex-roar.mp3">Ses dosyasını indir</a>.
                 </audio>
             </figure>
         </section>
 
-        <section id="bolum3">
-            <h2>Gizemli Göl</h2>
-            <img src="https://www.3boyutluduvarkagitlari.com/FotoGaleri/Small/Gizemli-G%C3%B6l-Duvar-Ka%C4%9F%C4%B1d%C4%B1222202115360787.jpg" alt="Gizemli bir göl" />
-            <p>Tavşan, derin ormanın içindeki gizemli bir göle ulaşmış. Bu göl, masal dünyasının en güzel yeriymiş. Fakat gölün etrafında tuhaf sesler duyuluyormuş.</p>
-            <figure>
-                <figcaption>Bölüm 3 dinle:</figcaption>
-                <audio controls>
+        <section id="bolum3" style="background-color: #ffffff; padding: 20px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+            <h2 style="color: #333333;">Bölüm 3: Gizemli Göl</h2>
+            <img src="https://www.3boyutluduvarkagitlari.com/FotoGaleri/Small/Gizemli-G%C3%B6l-Duvar-Ka%C4%9F%C4%B1d%C4%B1222202115360787.jpg" alt="Gizemli Göl" width="600" height="400"
+                style="display: block; margin: 10px auto; border-radius: 8px;" />
+            <p style="color: #555555; line-height: 1.6;">Tavşan, derin ormanın içindeki gizemli bir göle ulaşmış. Bu göl, masal dünyasının en güzel yeriymiş. Fakat gölün etrafında tuhaf sesler duyuluyormuş.</p>
+            <figure style="text-align: center;">
+                <figcaption style="color: #333333; margin-bottom: 10px;">Bölüm 3 dinle:</figcaption>
+                <audio controls style="width: 100%; max-width: 600px;">
                     <source src="/media/cc0-audio/t-rex-roar.mp3" type="audio/mp3">
                     Tarayıcınız audio etiketini desteklemiyor. <a href="/media/cc0-audio/t-rex-roar.mp3">Ses dosyasını indir</a>.
                 </audio>
             </figure>
         </section>
 
-        <section id="bolum4">
-            <h2>Arkadaşlık</h2>
-            <img src="https://m.media-amazon.com/images/I/61BHp+L9i2L._AC_UF894,1000_QL80_.jpg" alt="Tavşanın arkadaşlarıyla macera yaşaması" />
-            <p>Tavşan, ormanda yeni arkadaşlar edinmiş. Birlikte maceralar yaşamışlar ve dostluklarının gücüyle her zorluğun üstesinden gelmişler.</p>
-            <figure>
-                <figcaption>Bölüm 4 dinle:</figcaption>
-                <audio controls>
+        <section id="bolum4" style="background-color: #ffffff; padding: 20px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+            <h2 style="color: #333333;">Bölüm 4: Arkadaşlık</h2>
+            <img src="https://m.media-amazon.com/images/I/61BHp+L9i2L._AC_UF894,1000_QL80_.jpg" alt="Arkadaşlık" width="600" height="400"
+                style="display: block; margin: 10px auto; border-radius: 8px;" />
+            <p style="color: #555555; line-height: 1.6;">Tavşan, ormanda yeni arkadaşlar edinmiş. Birlikte maceralar yaşamışlar ve dostluklarının gücüyle her zorluğun üstesinden gelmişler.</p>
+            <figure style="text-align: center;">
+                <figcaption style="color: #333333; margin-bottom: 10px;">Bölüm 4 dinle:</figcaption>
+                <audio controls style="width: 100%; max-width: 600px;">
                     <source src="/media/cc0-audio/t-rex-roar.mp3" type="audio/mp3">
                     Tarayıcınız audio etiketini desteklemiyor. <a href="/media/cc0-audio/t-rex-roar.mp3">Ses dosyasını indir</a>.
                 </audio>
@@ -76,9 +80,10 @@
         </section>
     </main>
 
-    <footer>
-        <p>© 2024 Tavşan Hikayesi. Tüm hakları saklıdır.</p>
+    <footer style="background-color: #4CAF50; color: white; text-align: center; padding: 15px 0;">
+        <p style="margin: 0;">© 2024 Tavşan Hikayesi. Tüm hakları saklıdır.</p>
     </footer>
+
 </body>
 
 </html>
