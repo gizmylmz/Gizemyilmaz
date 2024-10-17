@@ -5,8 +5,15 @@
         font-family: Arial, sans-serif;
     }
 
+    .container {
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        margin: 20px;
+    }
+
     table {
-        width: 50%;
+        width: 100%;
         margin: 0 auto;
         border-collapse: collapse;
         border: 2px solid white; /* Beyaz kenarlık */
@@ -47,7 +54,7 @@
 
     /* Ders planı tablosu genişletilmiş */
     .schedule-table {
-        width: 70%;
+        width: 100%;
         margin: 0 auto;
         border-collapse: collapse;
         border: 2px solid white; /* Beyaz kenarlık */
@@ -59,126 +66,146 @@
         text-align: center;
         color: white; /* Yazı rengi */
     }
+
+    /* Form genişliği */
+    .form-table {
+        width: 60%;
+    }
+
+    /* Ders planı genişliği */
+    .schedule-container {
+        width: 35%;
+    }
 </style>
+
 <h1>Lütfen Formu Eksiksiz Doldurunuz.</h1>
 <hr>
-<form>
-    <table>
-        <tr>
-            <th colspan="2"><h4>Hesap Bilgileriniz</h4></th>
-        </tr>
-        <tr>
-            <td>Kullanıcı Adı :</td>
-            <td><input type="text" name="username" placeholder="Kullanıcı adı giriniz" required></td>
-        </tr>
-        <tr>
-            <td>Eposta :</td>
-            <td><input type="email" name="eposta" placeholder="Eposta giriniz" required></td>
-        </tr>
-        <tr>
-            <td>Parola :</td>
-            <td><input type="password" name="parola" placeholder="parola giriniz" required></td>
-        </tr>
-        
-        <tr>
-            <th colspan="2"><h4>Kişisel Bilgileriniz</h4></th>
-        </tr>
-        <tr>
-            <td>Ad :</td>
-            <td><input type="text" name="ad"></td>
-        </tr>
-        <tr>
-            <td>Soyad :</td>
-            <td><input type="text" name="soyad"></td>
-        </tr>
-        <tr>
-            <td>Şehir :</td>
-            <td>
-                <select name="sehir">
-                    <option>Seçiniz</option>
-                    <option>Ankara</option>
-                    <option>İstanbul</option>
-                    <option>Kocaeli</option>
-                </select>
-            </td>
-        </tr>
-        <tr>
-            <td>Cinsiyet :</td>
-            <td>
-                <input type="radio" name="cinsiyet"> Erkek
-                <input type="radio" name="cinsiyet"> Kadın
-            </td>
-        </tr>
-        <tr>
-            <td>Hobileriniz :</td>
-            <td>
-                <input type="checkbox" name="hobiler">Sinema
-                <input type="checkbox" name="hobiler">Gezmek
-                <input type="checkbox" name="hobiler">Spor
-                <input type="checkbox" name="hobiler">Kitap
-            </td>
-        </tr>
-        <tr>
-            <td colspan="2" style="text-align: center;">
-                <input type="submit" value="Kaydet">
-            </td>
-        </tr>
-        <h1>Ders Planı</h1>
-<hr>
-<table border="1" style="width: 70%; margin: 0 auto; text-align: center; border-collapse: collapse;">
-    <thead>
-        <tr>
-            <th>Gün</th>
-            <th>08:00 - 10:00</th>
-            <th>10:00 - 12:00</th>
-            <th>12:00 - 14:00</th>
-            <th>14:00 - 16:00</th>
-            <th>16:00 - 18:00</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Pazartesi</td>
-            <td>Matematik</td>
-            <td>Türkçe</td>
-            <td>Öğle Arası</td>
-            <td>Fizik</td>
-            <td>Kimya</td>
-        </tr>
-        <tr>
-            <td>Salı</td>
-            <td>Geometri</td>
-            <td>Biyoloji</td>
-            <td>Öğle Arası</td>
-            <td>Tarih</td>
-            <td>Coğrafya</td>
-        </tr>
-        <tr>
-            <td>Çarşamba</td>
-            <td>İngilizce</td>
-            <td>Matematik</td>
-            <td>Öğle Arası</td>
-            <td>Kimya</td>
-            <td>Beden Eğitimi</td>
-        </tr>
-        <tr>
-            <td>Perşembe</td>
-            <td>Fizik</td>
-            <td>Tarih</td>
-            <td>Öğle Arası</td>
-            <td>Edebiyat</td>
-            <td>Resim</td>
-        </tr>
-        <tr>
-            <td>Cuma</td>
-            <td>Matematik</td>
-            <td>İngilizce</td>
-            <td>Öğle Arası</td>
-            <td>Biyoloji</td>
-            <td>Müzik</td>
-        </tr>
-    </tbody>
-</table>
 
-    </table>
-</form>
+<div class="container">
+    <!-- Form Tablosu -->
+    <div class="form-container">
+        <form>
+            <table class="form-table">
+                <tr>
+                    <th colspan="2"><h4>Hesap Bilgileriniz</h4></th>
+                </tr>
+                <tr>
+                    <td>Kullanıcı Adı :</td>
+                    <td><input type="text" name="username" placeholder="Kullanıcı adı giriniz" required></td>
+                </tr>
+                <tr>
+                    <td>Eposta :</td>
+                    <td><input type="email" name="eposta" placeholder="Eposta giriniz" required></td>
+                </tr>
+                <tr>
+                    <td>Parola :</td>
+                    <td><input type="password" name="parola" placeholder="parola giriniz" required></td>
+                </tr>
+
+                <tr>
+                    <th colspan="2"><h4>Kişisel Bilgileriniz</h4></th>
+                </tr>
+                <tr>
+                    <td>Ad :</td>
+                    <td><input type="text" name="ad"></td>
+                </tr>
+                <tr>
+                    <td>Soyad :</td>
+                    <td><input type="text" name="soyad"></td>
+                </tr>
+                <tr>
+                    <td>Şehir :</td>
+                    <td>
+                        <select name="sehir">
+                            <option>Seçiniz</option>
+                            <option>Ankara</option>
+                            <option>İstanbul</option>
+                            <option>Kocaeli</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Cinsiyet :</td>
+                    <td>
+                        <input type="radio" name="cinsiyet"> Erkek
+                        <input type="radio" name="cinsiyet"> Kadın
+                    </td>
+                </tr>
+                <tr>
+                    <td>Hobileriniz :</td>
+                    <td>
+                        <input type="checkbox" name="hobiler">Sinema
+                        <input type="checkbox" name="hobiler">Gezmek
+                        <input type="checkbox" name="hobiler">Spor
+                        <input type="checkbox" name="hobiler">Kitap
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center;">
+                        <input type="submit" value="Kaydet">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+    <!-- Ders Planı Tablosu -->
+    <div class="schedule-container">
+        <h1>Ders Planı</h1>
+        <hr>
+        <table class="schedule-table">
+            <thead>
+                <tr>
+                    <th>Gün</th>
+                    <th>08:00 - 10:00</th>
+                    <th>10:00 - 12:00</th>
+                    <th>12:00 - 14:00</th>
+                    <th>14:00 - 16:00</th>
+                    <th>16:00 - 18:00</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Pazartesi</td>
+                    <td>Matematik</td>
+                    <td>Türkçe</td>
+                    <td>Öğle Arası</td>
+                    <td>Fizik</td>
+                    <td>Kimya</td>
+                </tr>
+                <tr>
+                    <td>Salı</td>
+                    <td>Geometri</td>
+                    <td>Biyoloji</td>
+                    <td>Öğle Arası</td>
+                    <td>Tarih</td>
+                    <td>Coğrafya</td>
+                </tr>
+                <tr>
+                    <td>Çarşamba</td>
+                    <td>İngilizce</td>
+                    <td>Matematik</td>
+                    <td>Öğle Arası</td>
+                    <td>Kimya</td>
+                    <td>Beden Eğitimi</td>
+                </tr>
+                <tr>
+                    <td>Perşembe</td>
+                    <td>Fizik</td>
+                    <td>Tarih</td>
+                    <td>Öğle Arası</td>
+                    <td>Edebiyat</td>
+                    <td>Resim</td>
+                </tr>
+                <tr>
+                    <td>Cuma</td>
+                    <td>Matematik</td>
+                    <td>İngilizce</td>
+                    <td>Öğle Arası</td>
+                    <td>Biyoloji</td>
+                    <td>Müzik</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
