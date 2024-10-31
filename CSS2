@@ -1,1 +1,44 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Internal CSS ile Yemek Tablosu</title>
+  <style>
+    table {
+      width: 50%;
+      border-collapse: collapse;
+    }
+    th, td {
+      padding: 8px;
+      text-align: left;
+      border: 1px solid #000;
+    }
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Internal CSS ile Yemek Tablosu</h2>
+<table>
+  <tr>
+    <th>Yemek Adı</th>
+    <th>Kategori</th>
+    <th>Kalori</th>
+  </tr>
+  <tr>
+    <td>Lahmacun</td>
+    <td>Ana Yemek</td>
+    <td>450</td>
+  </tr>
+  <tr>
+    <td>Çorba</td>
+    <td>Başlangıç</td>
+    <td>100</td>
+  </tr>
+</table>
+
+</body>
+</html>
 
