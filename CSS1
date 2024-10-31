@@ -1,1 +1,30 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Inline CSS ile Yemek Tablosu</title>
+</head>
+<body>
+
+<h2>Inline CSS ile Yemek Tablosu</h2>
+<table border="1" style="width: 50%; border-collapse: collapse;">
+  <tr style="background-color: #f2f2f2;">
+    <th style="padding: 8px; text-align: left;">Yemek Adı</th>
+    <th style="padding: 8px; text-align: left;">Kategori</th>
+    <th style="padding: 8px; text-align: left;">Kalori</th>
+  </tr>
+  <tr>
+    <td style="padding: 8px;">Lahmacun</td>
+    <td style="padding: 8px;">Ana Yemek</td>
+    <td style="padding: 8px;">450</td>
+  </tr>
+  <tr>
+    <td style="padding: 8px;">Çorba</td>
+    <td style="padding: 8px;">Başlangıç</td>
+    <td style="padding: 8px;">100</td>
+  </tr>
+</table>
+
+</body>
+</html>
 
