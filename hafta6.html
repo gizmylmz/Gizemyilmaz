@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: auto;
+            gap: 10px;
+            width: 80%;
+            max-width: 700px;
+        }
+
+        .box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-weight: bold;
+            font-size: 24px;
+            border-radius: 15px;
+            transition: background-color 0.3s;
+        }
+
+        .box:hover {
+            filter: brightness(85%);
+        }
+
+        .box.a { background-color: #A8D8EA; grid-column: span 3; }
+        .box.b { background-color: #AA96DA; }
+        .box.c { background-color: #FCBAD3; }
+        .box.d { background-color: #AA96DA; }
+        .box.e { background-color: #A8D8EA; grid-column: span 2; }
+        .box.f { background-color: #FCBAD3; }
+        .box.g { background-color: #A8D8EA; grid-column: span 3; }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="box a">A</div>
+        <div class="box b">B</div>
+        <div class="box c">C</div>
+        <div class="box d">D</div>
+        <div class="box e">E</div>
+        <div class="box f">F</div>
+        <div class="box g">G</div>
+    </div>
+
+</body>
+</html>
