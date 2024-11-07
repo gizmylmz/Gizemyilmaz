@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            max-width: 400px;
+            margin: auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="date"],
+        input[type="color"],
+        input[type="range"] {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h2>Web Programming Quiz</h2>
+    <form action="/submit_test" method="post">
+        
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required><br>
+
+        <label>1. What does HTML stand for?</label><br>
+        <input type="radio" id="html1" name="html" value="HyperText Markup Language">
+        <label for="html1">HyperText Markup Language</label><br>
+        <input type="radio" id="html2" name="html" value="HyperTool Markup Language">
+        <label for="html2">HyperTool Markup Language</label><br>
+
+        <label>2. Choose all programming languages you know:</label><br>
+        <input type="checkbox" id="language1" name="languages" value="HTML">
+        <label for="language1">HTML</label><br>
+        <input type="checkbox" id="language2" name="languages" value="CSS">
+        <label for="language2">CSS</label><br>
+        <input type="checkbox" id="language3" name="languages" value="JavaScript">
+        <label for="language3">JavaScript</label><br>
+
+        <label for="color">3. Choose your favorite color:</label>
+        <input type="color" id="color" name="color"><br>
+
+        <label for="date">4. Pick a date:</label>
+        <input type="date" id="date" name="date"><br>
+
+        <label for="range">5. Rate your HTML skills (1-10):</label>
+        <input type="range" id="range" name="range" min="1" max="10"><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
