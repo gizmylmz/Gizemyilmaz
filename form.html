@@ -58,31 +58,30 @@
     </style>
 </head>
 <body>
-    <h2>Membership Form</h2>
+    <h2>Üyelik Formu</h2>
     <form action="/submit_membership" method="post">
-        <label for="username">Username:</label>
+        <label for="username">Kullanıcı Adı:</label>
         <input type="text" id="username" name="username" required><br>
 
-        <label for="email">Email:</label>
+        <label for="email">E-mail:</label>
         <input type="email" id="email" name="email" required><br>
 
-        <label for="password">Password:</label>
+        <label for="password">Şifre:</label>
         <input type="password" id="password" name="password" required><br>
 
-        <label for="dob">Date of Birth:</label>
+        <label for="dob">Doğum Tarihiniz:</label>
         <input type="date" id="dob" name="dob"><br>
 
-        <label for="gender">Gender:</label>
+        <label for="gender">Cinsiyet:</label>
         <select id="gender" name="gender">
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-            <option value="other">Other</option>
+            <option value="male">Erkek</option>
+            <option value="female">Kadın</option>
         </select><br>
 
         <label>Interests:</label><br>
-        <input type="checkbox" name="interest" value="sports"> Sports<br>
-        <input type="checkbox" name="interest" value="music"> Music<br>
-        <input type="checkbox" name="interest" value="movies"> Movies<br>
+        <input type="checkbox" name="interest" value="sports"> Spor <br>
+        <input type="checkbox" name="interest" value="music"> Müzik <br>
+        <input type="checkbox" name="interest" value="movies"> Resim <br>
 
         <input type="submit" value="Register">
     </form>
