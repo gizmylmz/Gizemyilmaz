@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CSS Animasyon Örnekleri</title>
 <style>
+ 
   .container {
     display: flex;
     justify-content: space-around;
@@ -16,9 +17,14 @@
     height: 100px;
     background-color: coral;
     margin: 10px;
+    border-radius: 50%; /* Yuvarlak şekil */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px; 
   }
 
-  
+ 
   @keyframes upDown {
     0% { transform: translateY(0); }
     50% { transform: translateY(100px); }
@@ -37,6 +43,7 @@
     animation: growShrink 2s infinite;
   }
 
+  
   @keyframes fadeInOut {
     0%, 100% { opacity: 1; }
     50% { opacity: 0.2; }
@@ -45,7 +52,7 @@
     animation: fadeInOut 2s infinite;
   }
 
-  /* Sağa Sola Giden Gelen */
+ 
   @keyframes leftRight {
     0% { transform: translateX(0); }
     50% { transform: translateX(100px); }
@@ -68,12 +75,13 @@
 <body>
 
 <div class="container">
-  <div class="box up-down"></div>
-  <div class="box grow-shrink"></div>
-  <div class="box fade-in-out"></div>
-  <div class="box left-right"></div>
-  <div class="box rotate"></div>
+  <div class="box up-down">😊</div>
+  <div class="box grow-shrink">😊</div>
+  <div class="box fade-in-out">😊</div>
+  <div class="box left-right">😊</div>
+  <div class="box rotate">😊</div>
 </div>
 
 </body>
 </html>
+
