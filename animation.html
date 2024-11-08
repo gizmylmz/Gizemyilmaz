@@ -1,37 +1,80 @@
+<!DOCTYPE html>
+<html lang="tr">
 <head>
-  <style>
-    @keyframes renkDegisim
-{ from 
-	{background-color: white;}
-to 
-	{background-color: black;} }
-div
- {	width: 100px;
-    	height: 100px; 
-	background-color: red; 
-	animation-name: renkDegisim; 
-	animation-duration: 4s; 
-}
-	  @keyframes kutu1 
-	  {  0%   {background-color: red;};  25%  
-	   {background-color: yellow;};  50%  
-	   {background-color: blue;};  100% 
-	   {background-color: green;
-	   
-}
-	   
-	  div {
-		  width: 100px;
-		  height: 100px;  
-		  background-color: red;  animation-name: kutu1;  animation-duration: 4s;
-	  }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Animasyon Örnekleri</title>
+<style>
+  /* Ortak stiller */
+  .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+  }
+  .box {
+    width: 100px;
+    height: 100px;
+    background-color: coral;
+    margin: 10px;
+  }
 
-  </style>
-  <body>
+  
+  @keyframes upDown {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(100px); }
+    100% { transform: translateY(0); }
+  }
+  .up-down {
+    animation: upDown 2s infinite;
+  }
 
-    <div>
-      Merhaba
-    </div>
-    
-  </body>
+  
+  @keyframes growShrink {
+    0%, 100% { transform: scale(1); background-color: coral; }
+    50% { transform: scale(1.5); background-color: lightblue; }
+  }
+  .grow-shrink {
+    animation: growShrink 2s infinite;
+  }
+
+  @keyframes fadeInOut {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.2; }
+  }
+  .fade-in-out {
+    animation: fadeInOut 2s infinite;
+  }
+
+  /* Sağa Sola Giden Gelen */
+  @keyframes leftRight {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(100px); }
+    100% { transform: translateX(0); }
+  }
+  .left-right {
+    animation: leftRight 2s infinite;
+  }
+
+
+  @keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  .rotate {
+    animation: rotate 2s infinite linear;
+  }
+</style>
 </head>
+<body>
+
+<div class="container">
+  <div class="box up-down"></div>
+  <div class="box grow-shrink"></div>
+  <div class="box fade-in-out"></div>
+  <div class="box left-right"></div>
+  <div class="box rotate"></div>
+</div>
+
+</body>
+</html>
