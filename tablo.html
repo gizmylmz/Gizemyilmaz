@@ -7,28 +7,30 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            background-color: #FBF4DB; 
             margin: 0;
             padding: 20px;
+            color: #333;
         }
 
         table {
             width: 100%;
             border-collapse: collapse;
             margin: 0 auto;
-            background-color: #fff;
+            background-color: #FFFFFF;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
         th, td {
-            border: 1px solid #7f9096;
+            border: 1px solid #db6c0c;
             padding: 10px;
             text-align: center;
             font-size: 14px;
         }
 
         th {
-            background-color: #edf0f3;
+            background-color: #FDE7BB; 
+            color: #6A2C70;
             font-weight: bold;
         }
 
@@ -41,7 +43,7 @@
         }
 
         .empty-cell {
-            background-color: #f9f9f9;
+            background-color: #FBF4DB;
         }
 
         .lesson {
@@ -53,46 +55,82 @@
             font-size: 12px;
             color: #555;
         }
+
+        .form-container {
+            background-color: #AA5486; 
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #FC8F54;
+            text-align: center;
+        }
+
+        .form-container input, .form-container select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #FC8F54;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .form-container input[type="submit"] {
+            background-color: #FC8F54;
+            color: #FFF;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .form-container input[type="submit"]:hover {
+            background-color: #AA5486;
+        }
+
     </style>
 </head>
 
-    <h1>Lütfen Bilgilerinizi Eksiksiz Doldurunuz.</h1>
+<body>
+    <h1>Lütfen Bilgilerinizi Doldurunuz.</h1>
     <hr>
 
     <div class="container" style="margin: 20px;">
-       
         <div class="form-container">
             <form>
+                <table>
                     <tr>
-                        <th colspan="2" style="background-color: #FFCDEA; color: #6A2C70; padding: 10px;">Hesap Bilgileriniz</th>
+                        <th colspan="2">Hesap Bilgileriniz</th>
                     </tr>
                     <tr>
-                        <td>Kullanıcı Adı :</td>
+                        <td style="color: #db6c0c;">Kullanıcı Adı :</td>
                         <td><input type="text" name="username" placeholder="Kullanıcı adı giriniz" required></td>
                     </tr>
                     <tr>
-                        <td>Eposta :</td>
+                        <td style="color: #db6c0c;">Eposta :</td>
                         <td><input type="email" name="eposta" placeholder="Eposta giriniz" required></td>
                     </tr>
                     <tr>
-                        <td>Parola :</td>
+                        <td style="color: #db6c0c;">Parola :</td>
                         <td><input type="password" name="parola" placeholder="Parola giriniz" required></td>
                     </tr>
                     <tr>
-                        <th colspan="2" style="background-color: #FFCDEA; color: #6A2C70; padding: 10px;">Kişisel Bilgileriniz</th>
+                        <th colspan="2">Kişisel Bilgileriniz</th>
                     </tr>
                     <tr>
-                        <td>Ad :</td>
+                        <td style="color: #db6c0c;">Ad :</td>
                         <td><input type="text" name="ad"></td>
                     </tr>
                     <tr>
-                        <td>Soyad :</td>
+                        <td style="color: #db6c0c;">Soyad :</td>
                         <td><input type="text" name="soyad"></td>
                     </tr>
                     <tr>
-                        <td>Şehir :</td>
+                        <td style="color: #db6c0c;">Şehir :</td>
                         <td>
-                            <select name="sehir">
+                            <select name="sehir", style="color: #db6c0c;">
                                 <option>Seçiniz</option>
                                 <option>Ankara</option>
                                 <option>İstanbul</option>
@@ -101,15 +139,15 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>Cinsiyet :</td>
-                        <td>
-                            <input type="radio" name="cinsiyet"> Erkek
-                            <input type="radio" name="cinsiyet"> Kadın
+                        <td style="color: #db6c0c;">Cinsiyet :</td>
+                        <td style="color: #db6c0c;">
+                            <input type="radio" name="cinsiyet" style="color: #6A2C70;"> Erkek
+                            <input type="radio" name="cinsiyet" style="color: #6A2C70;"> Kadın
                         </td>
                     </tr>
                     <tr>
-                        <td>Hobileriniz :</td>
-                        <td>
+                        <td style="color: #db6c0c;">Hobileriniz :</td>
+                        <td style="color: #6A2C70;">
                             <input type="checkbox" name="hobiler"> Sinema
                             <input type="checkbox" name="hobiler"> Gezmek
                             <input type="checkbox" name="hobiler"> Spor
@@ -118,96 +156,64 @@
                     </tr>
                     <tr>
                         <td colspan="2" style="text-align: center;">
-                            <input type="submit" value="Kaydet" style="background-color: #FFCDEA; color: #6A2C70; padding: 10px 20px; border: none; cursor: pointer; font-size: 16px;">
+                            <input type="submit" value="Kaydet">
                         </td>
                     </tr>
                 </table>
             </form>
         </div>
 
-         <h2>Ders Programı</h2>
-    <table>
-        <tr>
-            <th class="time">Ders Saatleri</th>
-            <th class="day">Pazartesi</th>
-            <th class="day">Salı</th>
-            <th class="day">Çarşamba</th>
-            <th class="day">Perşembe</th>
-            <th class="day">Cuma</th>
-        </tr>
-        <tr>
-            <td>8:40 - 9:30</td>
-            <td class="lesson">BTE307.01 Eğitimde Modelleme ve Tasarım<br><span class="location">Dr. A. ÖZKÖK - D1</span></td>
-            <td class="empty-cell"></td>
-            <td class="empty-cell"></td>
-            <td class="empty-cell"></td>
-            <td class="empty-cell"></td>
-        </tr>
-        <tr>
-            <td>9:40 - 10:30</td>
-            <td class="empty-cell"></td>
-            <td class="lesson">BTE313 Eğitsel Video Tasarımı<br><span class="location">Dr. P. NUHOĞLU KİBAR - LAB</span></td>
-            <td class="lesson">Eleştirel ve Analitik Düşünme<br><span class="location">B202</span></td>
-            <td class="empty-cell"></td>
-            <td class="lesson">BTE 311 (BTÖ 311) İnternet Tabanlı Programlama<br><span class="location">Dr. E. KIDIMAN - LAB</span></td>
-        </tr>
-        <tr>
-            <td>10:40 - 11:30</td>
-            <td class="lesson">Eğitimde Etik ve Ahlak<br><span class="location">M7</span></td>
-            <td class="empty-cell"></td>
-            <td class="empty-cell"></td>
-            <td class="empty-cell"></td>
-            <td class="empty-cell"></td>
-        </tr>
-        <tr>
-            <td>11:40 - 12:30</td>
-            <td class="empty-cell"></td>
-            <td class="empty-cell"></td>
-            <td class="empty-cell"></td>
-            <td class="empty-cell"></td>
-            <td class="empty-cell"></td>
-        </tr>
-        <tr>
-            <td>12:40 - 13:30</td>
-            <td class="lesson">BTE307.02 Eğitimde Modelleme ve Tasarım<br><span class="location">Dr. A. ÖZKÖK - LAB</span></td>
-            <td class="empty-cell"></td>
-            <td class="lesson">BTE322 Eğitimde Yapay Zekâ Uyg.<br><span class="location">Dr. G. AKÇAPINAR - LAB</span></td>
-            <td class="empty-cell"></td>
-            <td class="lesson">Müze eğitimi<br><span class="location">AZ02</span></td>
-        </tr>
-        <tr>
-            <td>13:40 - 14:30</td>
-            <td class="empty-cell"></td>
-            <td class="empty-cell"></td>
-            <td class="empty-cell"></td>
-            <td class="empty-cell"></td>
-            <td class="empty-cell"></td>
-        </tr>
-        <tr>
-            <td>14:40 - 15:30</td>
-            <td class="empty-cell"></td>
-            <td class="lesson">BTE309 Bilişim Öğretim Programları<br><span class="location">Dr. P. TEKELİ - D3</span></td>
-            <td class="empty-cell"></td>
-            <td class="lesson">Sınıf Yönetimi<br><span class="location">B10206</span></td>
-            <td class="empty-cell"></td>
-        </tr>
-        <tr>
-            <td>15:40 - 16:30</td>
-            <td class="empty-cell"></td>
-            <td class="empty-cell"></td>
-            <td class="empty-cell"></td>
-            <td class="empty-cell"></td>
-            <td class="empty-cell"></td>
-        </tr>
-        <tr>
-            <td>16:40 - 17:30</td>
-            <td class="empty-cell"></td>
-            <td class="empty-cell"></td>
-            <td class="empty-cell"></td>
-            <td class="empty-cell"></td>
-            <td class="empty-cell"></td>
-        </tr>
-    </table>
+        <h2>Ders Programı</h2>
+        <table>
+            <tr>
+                <th class="time">Ders Saatleri</th>
+                <th class="day">Pazartesi</th>
+                <th class="day">Salı</th>
+                <th class="day">Çarşamba</th>
+                <th class="day">Perşembe</th>
+                <th class="day">Cuma</th>
+            </tr>
+            <tr>
+                <td>8:40 - 9:30</td>
+                <td class="lesson">BTE307.01 Eğitimde Modelleme ve Tasarım<br><span class="location">Dr. A. ÖZKÖK - D1</span></td>
+                <td class="empty-cell"></td>
+                <td class="empty-cell"></td>
+                <td class="empty-cell"></td>
+                <td class="empty-cell"></td>
+            </tr>
+            <tr>
+                <td>9:40 - 10:30</td>
+                <td class="empty-cell"></td>
+                <td class="lesson">BTE313 Eğitsel Video Tasarımı<br><span class="location">Dr. P. NUHOĞLU KİBAR - LAB</span></td>
+                <td class="lesson">Eleştirel ve Analitik Düşünme<br><span class="location">B202</span></td>
+                <td class="empty-cell"></td>
+                <td class="lesson">BTE 311 İnternet Tabanlı Programlama<br><span class="location">Dr. E. KIDIMAN - LAB</span></td>
+            </tr>
+            <tr>
+                <td>10:40 - 11:30</td>
+                <td class="lesson">Eğitimde Etik ve Ahlak<br><span class="location">M7</span></td>
+                <td class="empty-cell"></td>
+                <td class="empty-cell"></td>
+                <td class="empty-cell"></td>
+                <td class="empty-cell"></td>
+            </tr>
+            <tr>
+                <td>12:40 - 13:30</td>
+                <td class="lesson">BTE307.02 Eğitimde Modelleme ve Tasarım<br><span class="location">Dr. A. ÖZKÖK - LAB</span></td>
+                <td class="empty-cell"></td>
+                <td class="lesson">BTE322 Eğitimde Yapay Zekâ Uyg.<br><span class="location">Dr. G. AKÇAPINAR - LAB</span></td>
+                <td class="empty-cell"></td>
+                <td class="lesson">Müze eğitimi<br><span class="location">AZ02</span></td>
+            </tr>
+            <tr>
+                <td>14:40 - 15:30</td>
+                <td class="empty-cell"></td>
+                <td class="lesson">BTE309 Bilişim Öğretim Programları<br><span class="location">Dr. P. TEKELİ - D3</span></td>
+                <td class="empty-cell"></td>
+                <td class="lesson">Sınıf Yönetimi<br><span class="location">B10206</span></td>
+                <td class="empty-cell"></td>
+            </tr>
+        </table>
+    </div>
 </body>
 </html>
-
