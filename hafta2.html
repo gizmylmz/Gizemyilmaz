@@ -10,93 +10,153 @@
             display: inline-block;
             margin: 20px;
             padding: 15px 25px;
-            background-color: #ff99cc;
+            background-color:background-color: rgba(255, 153, 204, 0.5);
+            ;
             color: white;
             text-decoration: none;
-            font-size: 1.2em;
-            border-radius: 10px;
-            transition: background-color 0.3s ease;
+            font-size:1.2em;
+            border-radius:10px;
+            transition:background-color 0.3s ease;
         }
         a:hover {
-            background-color: #ff66b3;
+            background-color: rgba(255, 0, 128, 0.5);
         }
+
+        p {
+    color: #000000;
+    line-height: 1.6;
+    padding: 40px;
+}
          </style>
     
 </head>
 
-<body style="font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f0f8ff;">
+<body style="font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #000000;">
 
-    <header style="background-color: #E75480; color: white; padding: 20px 0; text-align: center;">
-        <h1 style="margin: 0;">Rapunzel</h1>
-        <nav>
-            <ul style="list-style: none; padding: 0; margin: 10px 0; display: flex; justify-content: center; gap: 20px;">
-                <li><a href="#bolum1" style="color: white; text-decoration: none; font-weight: bold;">Bölüm 1</a></li>
-                <li><a href="#bolum2" style="color: white; text-decoration: none; font-weight: bold;">Bölüm 2</a></li>
-                <li><a href="#bolum3" style="color: white; text-decoration: none; font-weight: bold;">Bölüm 3</a></li>
-                <li><a href="#bolum4" style="color: white; text-decoration: none; font-weight: bold;">Bölüm 4</a></li>
+    <header style="background-color: #F38BA0; padding: 20px 0; text-align: center; position: relative; overflow: hidden; height: 175px;">
+    
+        <!-- Arka Plan: Romantik Işıklandırma Efekti -->
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></div>
+        
+        <!-- Başlık: Rapunzel -->
+        <h1 style="margin: 0; font-size: 48px; color: #FFF9E3; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); position: relative; z-index: 1;">Rapunzel'in Masalı</h1>
+        
+        <!-- Navigasyon: Bölüm Linkleri -->
+        <nav style="position: relative; z-index: 1; margin-top: 15px;">
+            <ul style="list-style: none; padding: 0; margin: 0; display: flex; justify-content: center; gap: 25px;">
+                <li><a href="#bolum1" style="color: #FFF9E3; text-decoration: none; font-weight: bold; font-size: 18px; -webkit-text-stroke: 0.5px #582F0E; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);">Bölüm 1</a></li>
+                <li><a href="#bolum2" style="color: #FFF9E3; text-decoration: none; font-weight: bold; font-size: 18px; -webkit-text-stroke: 0.5px #582F0E; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);">Bölüm 2</a></li>
+                <li><a href="#bolum3" style="color: #FFF9E3; text-decoration: none; font-weight: bold; font-size: 18px; -webkit-text-stroke: 0.5px #582F0E; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);">Bölüm 3</a></li>
+                <li><a href="#bolum4" style="color: #FFF9E3; text-decoration: none; font-weight: bold; font-size: 18px; -webkit-text-stroke: 0.5px #582F0E; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);">Bölüm 4</a></li>
             </ul>
         </nav>
+    
+        <!-- Geri Dönüş Butonu -->
+        <a href="index.html" style="position: absolute; top: 20px; right: 20px; padding: 10px 15px; background-color: #f00979; color: #582F0E; font-weight: bold; text-decoration: none; border-radius: 5px; box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3); font-size: 24px;">
+            ←
+        </a>
+        
     </header>
+    
+    
+    
+    
+    
 
     <main style="padding: 20px;">
-        <section id="bolum1" style="background-color: #ffffff; padding: 20px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
-            <h2 style="color: #333333;">Bölüm 1: Rapunzel'in Doğuşu ve Kuleye Kapatılması</h2>
-            <img src="https://i.pinimg.com/enabled_hi/564x/e3/4c/5d/e34c5d1ce256477d1f7955e70e205667.jpg"
-                alt="Orman" width="600" height="400" style="display: block; margin: 10px auto; border-radius: 8px;" />
-            <p style="color: #555555; line-height: 1.6;">Bir zamanlar bir çiftçi ve karısı, çok uzun zamandır çocuk sahibi olmak istiyordu. Bir gün, çiftçinin eşi hamile kaldı ve bir gün komşularının bahçesinde büyüyen taze rapunzel bitkisini (bir çeşit marul) canı çok çekti. Bu bahçe, kötü bir cadıya aitti. Çiftçinin eşi rapunzelleri yemeyi çok istediği için, kocası gizlice bahçeye girip bitkileri çaldı. Fakat cadı, adamı yakaladı ve ona bir anlaşma sundu: Karısına rapunzel bitkisini verecek, fakat doğacak olan çocuklarını cadıya vereceklerdi. Çaresiz çiftçi kabul etti ve doğan kız çocuğunu cadıya teslim ettiler. Cadı, ona "Rapunzel" ismini verdi ve büyüdüğünde onu kimsenin ulaşamayacağı yüksek bir kuleye hapsetti.</p>
-            <figure style="text-align: center;">
-                <figcaption style="color: #333333; margin-bottom: 10px;">Bölüm 1 dinle:</figcaption>
-                <audio controls src="1.mp3" autoplay >
-        </audio>
-            </figure>
-        </section>
+        <section id="bolum1" style="background-color:#F38BA0; padding: 20px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+            <h2 style="color: #000000;">Bölüm 1: Rapunzel'in Doğuşu ve Kuleye Kapatılması</h2>
 
-        <section id="bolum2" style="background-color: #ffffff; padding: 20px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
-            <h2 style="color: #333333;">Bölüm 2: Rapunzel'in Kuledeki Hayatı</h2>
-            <img src="https://i.pinimg.com/enabled_hi/564x/8d/19/3e/8d193e2b125f49b6116b9bf77cf540d1.jpg" alt="Cesur Tavşan" width="600" height="400"
-                style="display: block; margin: 10px auto; border-radius: 8px;" />
-            <p style="color: #555555; line-height: 1.6;">Rapunzel, kulede yalnızca cadının ziyaret ettiği, yüksek duvarlarla çevrili bir yaşam sürüyordu. Saçları o kadar uzundu ki, cadı onu görmek istediğinde "Rapunzel, Rapunzel, saçlarını sarkıt!" diye seslenir ve Rapunzel uzun saçlarını aşağı doğru sarkıtırdı. Yıllar boyunca bu şekilde yaşadı. Dış dünyadan tamamen izoleydi, sadece kuleden görebildiği kadarını biliyordu.</p>
-            <figure style="text-align: center;">
-                <figcaption style="color: #333333; margin-bottom: 10px;">Bölüm 2 dinle:</figcaption>
-                <audio controls style="width: 100%; max-width: 600px;">
-                    <source src="/ses/1.mp3" type="audio/mp3">
-                    Tarayıcınız audio etiketini desteklemiyor. <a href="/media/cc0-audio/t-rex-roar.mp3">Ses dosyasını indir</a>.
-                </audio>
-            </figure>
-        </section>
-
-        <section id="bolum3" style="background-color: #ffffff; padding: 20px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
-            <h2 style="color: #333333;">Bölüm 3: Prensin Rapunzel'i Keşfetmesi </h2>
-            <img src="https://i.pinimg.com/564x/c9/b7/7a/c9b77a137a5d5e7e14a5383932afa265.jpg" alt="Gizemli Göl" width="600" height="400"
-                style="display: block; margin: 10px auto; border-radius: 8px;" />
-            <p style="color: #555555; line-height: 1.6;">Bir gün, genç bir prens ormandan geçerken Rapunzel’in şarkı söylediğini duydu. Sesin geldiği yeri bulduğunda, devasa kuleyi gördü ama nasıl gireceğini bilmedi. Kısa bir süre sonra cadının kuleye tırmanmak için Rapunzel’in saçlarını kullandığını fark etti. Cadının gitmesini bekleyen prens, aynı şekilde "Rapunzel, Rapunzel, saçlarını sarkıt!" diye seslendi. Rapunzel, prensin sesiyle şaşırsa da saçlarını aşağı sarkıttı. Böylece prens kuleye tırmanarak Rapunzel ile tanıştı. İkisi zamanla birbirine aşık oldu ve Rapunzel prensle kaçmayı planladı.</p>
-            <figure style="text-align: center;">
-                <figcaption style="color: #333333; margin-bottom: 10px;">Bölüm 3 dinle:</figcaption>
-                <audio controls style="width: 100%; max-width: 600px;">
-                    <source src="/media/cc0-audio/t-rex-roar.mp3" type="audio/mp3">
-                    Tarayıcınız audio etiketini desteklemiyor. <a href="/media/cc0-audio/t-rex-roar.mp3">Ses dosyasını indir</a>.
-                </audio>
-            </figure>
-        </section>
-
-        <section id="bolum4" style="background-color: #ffffff; padding: 20px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
-            <h2 style="color: #333333;">Bölüm 4: Cadının İhaneti ve Mutlu Son</h2>
-            <img src="https://i.pinimg.com/564x/d1/1d/15/d11d150b733a20397af190fa652767a9.jpg" alt="Arkadaşlık" width="600" height="400"
-                style="display: block; margin: 10px auto; border-radius: 8px;" />
-            <p style="color: #555555; line-height: 1.6;">Planı öğrenen cadı, Rapunzel'i cezalandırarak onun saçlarını kesti ve onu uzak bir çöl bölgesine sürdü. Cadı, prensi yakalamak için kuleden sarkan saçları kullandı. Prens, kuleye tırmandığında cadıyla karşılaştı. Cadı onu lanetleyerek kör etti ve ormana düşürdü. Prens aylarca kör bir şekilde dolaştı, ancak bir gün çölde Rapunzel’i buldu. Rapunzel, gözlerine ağladı ve mucizevi bir şekilde gözleri iyileşti. Prens ve Rapunzel, mutlu bir şekilde krallığa dönüp evlendiler.
-
-Bu şekilde, masal mutlu bir sonla biter.</p>
-            <figure style="text-align: center;">
-                <figcaption style="color: #333333; margin-bottom: 10px;">Bölüm 4 dinle:</figcaption>
-                <audio controls style="width: 100%; max-width: 600px;">
-                    <source src="/media/cc0-audio/t-rex-roar.mp3" type="audio/mp3">
-                    Tarayıcınız audio etiketini desteklemiyor. <a href="/media/cc0-audio/t-rex-roar.mp3">Ses dosyasını indir</a>.
-                </audio>
-            </figure>
+            <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+                <img src="https://24.media.tumblr.com/3709d6c33e40e8cce85667247bd1a23d/tumblr_mhftdcTYtR1s0xz29o1_500.gif"
+                    alt="Orman" width="300" height="200" style="border-radius: 12px; border: 10px solid transparent; 
+                    border-image: linear-gradient(45deg, #F38BA0, #F2D1D1, #DAEAF1) 1;" />
+                <img src="https://www.icegif.com/wp-content/uploads/2021/11/icegif-1436.gif"
+                    alt="Orman" width="300" height="200" style="border-radius: 12px; border: 10px solid transparent; 
+                    border-image: linear-gradient(45deg, #F38BA0, #F2D1D1, #DAEAF1) 1;" />
+                <img src="https://giffiles.alphacoders.com/953/95309.gif"
+                    alt="Orman" width="300" height="200" style="border-radius: 8px; border: 10px solid transparent; 
+                    border-image: linear-gradient(45deg, #d84ca7, #F2D1D1, #DAEAF1) 1;" />
+            </div>
+            
+            <p style="color: #000000; line-height: 1.6;">Bir zamanlar bir çiftçi ve karısı, çok uzun zamandır çocuk sahibi olmak istiyordu. Bir gün, çiftçinin eşi hamile kaldı ve bir gün komşularının bahçesinde büyüyen taze rapunzel bitkisini (bir çeşit marul) canı çok çekti. Bu bahçe, kötü bir cadıya aitti. Çiftçinin eşi rapunzelleri yemeyi çok istediği için, kocası gizlice bahçeye girip bitkileri çaldı. Fakat cadı, adamı yakaladı ve ona bir anlaşma sundu: Karısına rapunzel bitkisini verecek, fakat doğacak olan çocuklarını cadıya vereceklerdi. Çaresiz çiftçi kabul etti ve doğan kız çocuğunu cadıya teslim ettiler. Cadı, ona "Rapunzel" ismini verdi ve büyüdüğünde onu kimsenin ulaşamayacağı yüksek bir kuleye hapsetti.</p>
+            
         </section>
     </main>
 
-    <footer style="background-color: #E75480; color: white; text-align: center; padding: 15px 0;">
+
+    <main style="padding: 20px;">
+        <section id="bolum2" style="background-color: #F38BA0; padding: 20px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+            <h2 style="color: #000000;">Bölüm 2: Rapunzel'in Doğuşu ve Kuleye Kapatılması</h2>
+            
+            <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+                <img src="https://24.media.tumblr.com/c88ef14a26a3bf0131701acf8d41fdbd/tumblr_mdbae9jPYh1rcso6uo1_r1_500.gif"
+                    alt="Orman" width="300" height="200" style="border-radius: 12px; border: 10px solid transparent; 
+                    border-image: linear-gradient(45deg, #F38BA0, #F2D1D1, #DAEAF1) 1;" />
+                <img src="https://64.media.tumblr.com/e58668e282912a3b984e2d69ffeea8cd/f9b2e72084b4dbbd-a2/s540x810/4dccc8f90120d3d601790ee44bb23c7a3721e76b.gif"
+                    alt="Orman" width="300" height="200" style="border-radius: 12px; border: 10px solid transparent; 
+                    border-image: linear-gradient(45deg, #F38BA0, #F2D1D1, #DAEAF1) 1;" />
+                <img src="https://discourse.disneyheroesgame.com/uploads/default/original/3X/2/0/20c34268c6c3e3ab7d933b1d671802ed8ab0c30e.gif"
+                    alt="Orman" width="300" height="200" style="border-radius: 8px; border: 10px solid transparent; 
+                    border-image: linear-gradient(45deg, #F38BA0, #F2D1D1, #DAEAF1) 1;" />
+            </div>
+            
+            
+            <p style="color: #000000; line-height: 1.6;">Rapunzel, kulede yalnızca cadının ziyaret ettiği, yüksek duvarlarla çevrili bir yaşam sürüyordu. Saçları o kadar uzundu ki, cadı onu görmek istediğinde "Rapunzel, Rapunzel, saçlarını sarkıt!" diye seslenir ve Rapunzel uzun saçlarını aşağı doğru sarkıtırdı. Yıllar boyunca bu şekilde yaşadı. Dış dünyadan tamamen izoleydi, sadece kuleden görebildiği kadarını biliyordu.</p>
+            
+        </section>
+    </main>
+
+    <main style="padding: 20px;">
+        <section id="bolum3" style="background-color: #F38BA0; padding: 20px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+            <h2 style="color: #333333;">Bölüm 3: Prensin Rapunzel'i Keşfetmesi</h2>
+
+            <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+                <img src="https://i.pinimg.com/originals/e3/59/36/e359365ebd73164b647e70a9f0802d7e.gif"
+                    alt="Orman" width="300" height="200" style="border-radius: 12px; border: 10px solid transparent; 
+                    border-image: linear-gradient(45deg, #F38BA0, #F2D1D1, #DAEAF1) 1;" />
+                <img src="https://64.media.tumblr.com/ef1fe2b9c71796cf734e0639276c5601/tumblr_nobdvlMeEQ1rwfctbo1_500.gif"
+                    alt="Orman" width="300" height="200" style="border-radius: 12px; border: 10px solid transparent; 
+                    border-image: linear-gradient(45deg, #F38BA0, #F2D1D1, #DAEAF1) 1;" />
+                <img src="https://i.pinimg.com/originals/b7/f0/60/b7f060ba9f913120f6f71b937a79a67f.gif"
+                    alt="Orman" width="300" height="200" style="border-radius: 8px; border: 10px solid transparent; 
+                    border-image: linear-gradient(45deg, #F38BA0, #F2D1D1, #DAEAF1) 1;" />
+            </div>
+            
+            
+            <p style="color: #000000; line-height: 1.6;">Bir gün, genç bir prens ormandan geçerken Rapunzel’in şarkı söylediğini duydu. Sesin geldiği yeri bulduğunda, devasa kuleyi gördü ama nasıl gireceğini bilmedi. Kısa bir süre sonra cadının kuleye tırmanmak için Rapunzel’in saçlarını kullandığını fark etti. Cadının gitmesini bekleyen prens, aynı şekilde "Rapunzel, Rapunzel, saçlarını sarkıt!" diye seslendi. Rapunzel, prensin sesiyle şaşırsa da saçlarını aşağı sarkıttı. Böylece prens kuleye tırmanarak Rapunzel ile tanıştı. İkisi zamanla birbirine aşık oldu ve Rapunzel prensle kaçmayı planladı.</p>
+            
+        </section>
+    </main>
+
+    <main style="padding: 20px;">
+        <section id="bolum4" style="background-color: #F38BA0; padding: 20px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+            <h2 style="color: #000000;">Bölüm 4: Cadının İhaneti ve Mutlu Son</h2>
+
+
+            <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+                <img src="https://i.pinimg.com/originals/c7/4b/de/c74bde4f09c448a3d7af446dc2f89e13.gif"
+                    alt="Orman" width="300" height="200" style="border-radius: 12px; border: 10px solid transparent; 
+                    border-image: linear-gradient(45deg, #F38BA0, #F2D1D1, #DAEAF1) 1;" />
+                <img src="https://64.media.tumblr.com/cad83975121c2301261585cce2d405d9/tumblr_inline_oei0u8O0bT1r4bpi0_400.gif"
+                    alt="Orman" width="300" height="200" style="border-radius: 12px; border: 10px solid transparent; 
+                    border-image: linear-gradient(45deg, #F38BA0, #F2D1D1, #DAEAF1) 1;" />
+                <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExZGl1OXBrbTA5dmhtczNnc3FsbmI5bmdwbDhqbXFzenVvN3JmdjBzbCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/aLdEkri2O7qZG/giphy.webp"
+                    alt="Orman" width="300" height="200" style="border-radius: 8px; border: 10px solid transparent; 
+                    border-image: linear-gradient(45deg, #F38BA0, #F2D1D1, #DAEAF1) 1;" />
+            </div>
+
+            
+            
+            <p style="color: #000000; line-height: 1.6;">Planı öğrenen cadı, Rapunzel'i cezalandırarak onun saçlarını kesti ve onu uzak bir çöl bölgesine sürdü. Cadı, prensi yakalamak için kuleden sarkan saçları kullandı. Prens, kuleye tırmandığında cadıyla karşılaştı. Cadı onu lanetleyerek kör etti ve ormana düşürdü. Prens aylarca kör bir şekilde dolaştı, ancak bir gün çölde Rapunzel’i buldu. Rapunzel, gözlerine ağladı ve mucizevi bir şekilde gözleri iyileşti. Prens ve Rapunzel, mutlu bir şekilde krallığa dönüp evlendiler.
+
+                Bu şekilde, masal mutlu bir sonla biter.</p>
+            
+
+        </section>
+    </main>
+
+    <footer style="background-color: #F38BA0; color: white; text-align: center; padding: 15px 0; height: 100px;">
         <p style="margin: 0;">© 2024 Rapunzel Hikayesi.</p>
     </footer>
 
