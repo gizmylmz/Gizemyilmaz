@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rapunzel</title>
+    <style>
+        /* Genel Stiller */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+        }
+
+        header, footer {
+            background-color: #E75480;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Animasyon ve Bağlantı Stilleri */
+        a {
+            display: inline-block;
+            margin: 20px;
+            padding: 15px 25px;
+            background-color: #ff99cc;
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            border-radius: 10px;
+            transition: background-color 0.3s ease;
+            animation: fadeIn 1s ease;
+        }
+
+        a:hover {
+            background-color: #ff66b3;
+            transform: scale(1.05);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Ana İçerik Stili ve Grid Yapısı */
+        main {
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        section {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            animation: slideIn 0.8s ease;
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(10px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        section h2 {
+            color: #333333;
+        }
+
+        section img {
+            display: block;
+            margin: 10px auto;
+            border-radius: 8px;
+            width: 100%;
+            height: auto;
+            max-width: 600px;
+        }
+
+        section p {
+            color: #555555;
+            line-height: 1.6;
+        }
+
+        figure {
+            text-align: center;
+        }
+
+        figcaption {
+            color: #333333;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Rapunzel</h1>
+        <nav>
+            <ul>
+                <li><a href="#bolum1">Bölüm 1</a></li>
+                <li><a href="#bolum2">Bölüm 2</a></li>
+                <li><a href="#bolum3">Bölüm 3</a></li>
+                <li><a href="#bolum4">Bölüm 4</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="bolum1">
+            <h2>Bölüm 1: Rapunzel'in Doğuşu ve Kuleye Kapatılması</h2>
+            <img src="https://i.pinimg.com/enabled_hi/564x/e3/4c/5d/e34c5d1ce256477d1f7955e70e205667.jpg" alt="Orman" />
+            <p>Bir zamanlar bir çiftçi ve karısı, çok uzun zamandır çocuk sahibi olmak istiyordu...</p>
+            <figure>
+                <figcaption>Bölüm 1 dinle:</figcaption>
+                <audio controls src="1.mp3" autoplay></audio>
+            </figure>
+        </section>
+
+        <section id="bolum2">
+            <h2>Bölüm 2: Rapunzel'in Kuledeki Hayatı</h2>
+            <img src="https://i.pinimg.com/enabled_hi/564x/8d/19/3e/8d193e2b125f49b6116b9bf77cf540d1.jpg" alt="Cesur Tavşan" />
+            <p>Rapunzel, kulede yalnızca cadının ziyaret ettiği, yüksek duvarlarla çevrili bir yaşam sürüyordu...</p>
+            <figure>
+                <figcaption>Bölüm 2 dinle:</figcaption>
+                <audio controls src="2.mp3"></audio>
+            </figure>
+        </section>
+
+        <section id="bolum3">
+            <h2>Bölüm 3: Prensin Rapunzel'i Keşfetmesi</h2>
+            <img src="https://i.pinimg.com/564x/c9/b7/7a/c9b77a137a5d5e7e14a5383932afa265.jpg" alt="Gizemli Göl" />
+            <p>Bir gün, genç bir prens ormandan geçerken Rapunzel’in şarkı söylediğini duydu...</p>
+            <figure>
+                <figcaption>Bölüm 3 dinle:</figcaption>
+                <audio controls src="3.mp3"></audio>
+            </figure>
+        </section>
+
+        <section id="bolum4">
+            <h2>Bölüm 4: Cadının İhaneti ve Mutlu Son</h2>
+            <img src="https://i.pinimg.com/564x/d1/1d/15/d11d150b733a20397af190fa652767a9.jpg" alt="Arkadaşlık" />
+            <p>Planı öğrenen cadı, Rapunzel'i cezalandırarak onun saçlarını kesti...</p>
+            <figure>
+                <figcaption>Bölüm 4 dinle:</figcaption>
+                <audio controls src="4.mp3"></audio>
+            </figure>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Rapunzel Hikayesi.</p>
+    </footer>
+
+</body>
+
+</html>
