@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hafta 8 - Arka Plan ve Resimler</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      transition: background 0.8s ease-in-out;
+      color: #fff;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      min-height: 100vh;
+      backdrop-filter: blur(8px);
+      background-color: rgba(0, 0, 0, 0.4);
+      padding: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+      border-radius: 12px;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    }
+
+    .hafta8images {
+      display: flex;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .hafta8images img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+      opacity: 0;
+      transform: scale(0.9);
+      transition: opacity 0.5s ease, transform 0.3s ease;
+    }
+
+    .hafta8images img.show {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    button {
+      padding: 12px 24px;
+      margin: 10px;
+      border: none;
+      border-radius: 8px;
+      background: linear-gradient(45deg, #ff7eb3, #ff758c);
+      color: #fff;
+      font-size: 1em;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    button:hover {
+      transform: scale(1.1);
+      box-shadow: 0 8px 20px rgba(255, 117, 140, 0.7);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Powerpuff Girls</h1>
+    <div class="hafta8images">
+      <img id="image1" src="hafta8images/image1.jpg" alt="Image 1">
+      <img id="image2" src="hafta8images/image2.jpg" alt="Image 2">
+      <img id="image3" src="hafta8images/image3.jpg" alt="Image 3">
+    </div>
+    <button onclick="handleButtonClick('image1')"> Bubbles </button>
+    <button onclick="handleButtonClick('image2')"> Blossom </button>
+    <button onclick="handleButtonClick('image3')"> Buttercup </button>
+  </div>
+
+  <script>
+    // Arka plan dosyalarının bulunduğu klasör ve isimler
+    const backgrounds = [
+      'hafta8backgrounds/background1.jpg',
+      'hafta8backgrounds/background2.jpg',
+      'hafta8backgrounds/background3.jpg',
+      'hafta8backgrounds/background4.jpg',
+      'hafta8backgrounds/background5.jpg',
+      'hafta8backgrounds/background6.jpg',
+      'hafta8backgrounds/background7.jpg',
+      'hafta8backgrounds/background8.jpg',
+      'hafta8backgrounds/background9.jpg',
+      'hafta8backgrounds/background10.jpg'
+    ];
+
+    // Rastgele arka plan seçme işlevi
+    function setRandomBackground() {
+      const randomIndex = Math.floor(Math.random() * backgrounds.length);
+      const selectedBackground = backgrounds[randomIndex];
+      document.body.style.backgroundImage = url(${selectedBackground});
+    }
+
+    // Resim göster/gizle ve arka planı değiştir
+    function handleButtonClick(imageId) {
+      const img = document.getElementById(imageId);
+
+      // Resmi göster/gizle
+      img.classList.toggle('show');
+
+      // Rastgele bir arka plan ayarla
+      setRandomBackground();
+    }
+  </script>
+</body>
+</html>
