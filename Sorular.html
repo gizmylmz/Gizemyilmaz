@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz App</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f7f7;
+      color: #333;
+    }
+
+    h1 {
+      text-align: center;
+      color: #556b84;
+      margin-top: 20px;
+    }
+
+    #quiz-container {
+      max-width: 600px;
+      margin: 20px auto;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+    }
+
+    .question {
+      margin-bottom: 20px;
+      padding: 15px;
+      background-color: #e7eff6;
+      border: 1px solid #dbe2e8;
+      border-radius: 6px;
+    }
+
+    .question h3 {
+      margin-bottom: 10px;
+      color: #34495e;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      color: #2c3e50;
+    }
+
+    input[type="text"] {
+      width: calc(100% - 20px);
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #ced6e0;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+
+    #submit-btn {
+      display: block;
+      width: 100%;
+      padding: 10px 20px;
+      margin-top: 20px;
+      background-color: #91a8d0;
+      color: #fff;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    #submit-btn:hover {
+      background-color: #7899c8;
+    }
+
+    .results {
+      margin-top: 20px;
+      font-weight: bold;
+      text-align: center;
+      color: #3c6382;
+    }
+  </style>
+</head>
+<body>
+  <h1>Sınav uygulaması</h1>
+  <div id="quiz-container"></div>
+  <button id="submit-btn">Kaydet</button>
+  <div id="results" class="results"></div>
+
+  <script>
+    const quizData = {
+      "quiz": [
+        {
+          "id": 1,
+          "type": "multiple_choice",
+          "question": "Aşağıdakilerden hangisi bir programlama dilidir?",
+          "options": ["HTML", "Python", "CSS", "Bootstrap"],
+          "correct_answer": "Python"
+        },
+        {
+          "id": 2,
+          "type": "true_false",
+          "question": "Javascript sadece sayfalara stil verir.",
+          "correct_answer": false
+        },
+        {
+          "id": 4,
+          "type": "short_answer",
+          "question": "API ifadesinin açılımı nedir?",
+          "correct_answer": "Application Programming Interface"
+        }
+      ]
+    };
+
+    const quizContainer = document.getElementById('quiz-container');
+
+    function renderQuiz(quiz) {
+      quiz.forEach((question, index) => {
+        const questionDiv = document.createElement('div');
+        questionDiv.classList.add('question');
+
+        const questionTitle = document.createElement('h3');
+        questionTitle.textContent = `${index + 1}. ${question.question}`;
+        questionDiv.appendChild(questionTitle);
+
+        if (question.type === 'multiple_choice') {
+          question.options.forEach(option => {
+            const label = document.createElement('label');
+            label.innerHTML = `<input type="radio" name="question-${question.id}" value="${option}"> ${option}`;
+            questionDiv.appendChild(label);
+            questionDiv.appendChild(document.createElement('br'));
+          });
+        } else if (question.type === 'true_false') {
+          const trueLabel = document.createElement('label');
+          trueLabel.innerHTML = `<input type="radio" name="question-${question.id}" value="true"> True`;
+          questionDiv.appendChild(trueLabel);
+          questionDiv.appendChild(document.createElement('br'));
+
+          const falseLabel = document.createElement('label');
+          falseLabel.innerHTML = `<input type="radio" name="question-${question.id}" value="false"> False`;
+          questionDiv.appendChild(falseLabel);
+          questionDiv.appendChild(document.createElement('br'));
+        } else if (question.type === 'short_answer') {
+          const input = document.createElement('input');
+          input.type = 'text';
+          input.name = `question-${question.id}`;
+          questionDiv.appendChild(input);
+        }
+
+        quizContainer.appendChild(questionDiv);
+      });
+    }
+
+    function calculateResults() {
+      let correctCount = 0;
+      let incorrectCount = 0;
+
+      quizData.quiz.forEach(question => {
+        const userAnswer = document.querySelector(`[name="question-${question.id}"]:checked`)?.value ||
+          document.querySelector(`[name="question-${question.id}"]`)?.value;
+
+        if (question.type === 'multiple_choice' || question.type === 'short_answer') {
+          if (userAnswer?.trim() === question.correct_answer) {
+            correctCount++;
+          } else {
+            incorrectCount++;
+          }
+        } else if (question.type === 'true_false') {
+          if (userAnswer === String(question.correct_answer)) {
+            correctCount++;
+          } else {
+            incorrectCount++;
+          }
+        }
+      });
+
+      document.getElementById('results').textContent = `Correct: ${correctCount}, Incorrect: ${incorrectCount}`;
+    }
+
+    document.getElementById('submit-btn').addEventListener('click', calculateResults);
+
+    renderQuiz(quizData.quiz);
+  </script>
+</body>
+</html>
