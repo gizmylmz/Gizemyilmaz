@@ -1,0 +1,24 @@
+{
+  "quiz": [
+    {
+      "id": 1,
+      "type": "multiple_choice",
+      "question": "Aşağıdakilerden hangisi bir programlama dilidir?",
+      "options": ["HTML", "Python", "CSS", "Bootstrap"],
+      "correct_answer": "Python"
+    },
+    {
+      "id": 2,
+      "type": "true_false",
+      "question": " Javascript sadece sayfalara stil verir.",
+      "correct_answer": false
+    },
+
+    {
+      "id": 4,
+      "type": "short_answer",
+      "question": "API ifadesinin açılımı nedir?",
+      "correct_answer": "Application Programming Interface"
+    }
+  ]
+}
