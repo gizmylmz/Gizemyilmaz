@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resim Göster Gizle</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #ffe6f2;
+            color: #ff1493;
+        }
+
+        .container {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .character {
+            margin: 20px;
+            padding: 20px;
+            border: 2px solid #ff69b4;
+            border-radius: 10px;
+            display: inline-block;
+            background-color: #ffc0cb;
+        }
+
+        .character img {
+            width: 200px;
+            height: auto;
+            border-radius: 10px;
+            display: none;
+        }
+
+        .character button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #ff1493;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+        }
+
+        .character button:hover {
+            background-color: #e01186;
+        }
+    </style>
+</head>
+<body>
+    <h1>Arcane Karakterleri</h1>
+    <div class="container">
+        <div class="character">
+            <h2>Jinx</h2>
+            <img src="https://img.europapress.es/fotoweb/fotonoticia_20241128175232_690.jpg" alt="Jinx">
+            <button onclick="toggleImage(this); changeBackground('#ffcce6')">Resim Göster & Gizle</button>
+        </div>
+        <div class="character">
+            <h2>Vi</h2>
+            <img src="https://miro.medium.com/v2/resize:fit:1400/1*P4PdJq4ZKkcliA-N795DSA.jpeg" alt="Vi">
+            <button onclick="toggleImage(this); changeBackground('#e6ccff')">Resim Göster & Gizle</button>
+        </div>
+        <div class="character">
+            <h2>Caitlyn</h2>
+            <img src="https://media.tenor.com/YHN6ZmEV-IoAAAAe/caitlyn-caitlyn-arcane.png" alt="Caitlyn">
+            <button onclick="toggleImage(this); changeBackground('#cce6ff')">Resim Göster & Gizle</button>
+        </div>
+    </div>
+
+    <script>
+        function toggleImage(button) {
+            const img = button.previousElementSibling;
+            img.style.display = img.style.display === 'block' ? 'none' : 'block';
+        }
+
+        function changeBackground(color) {
+            document.body.style.backgroundColor = color;
+        }
+    </script>
+</body>
+</html>
