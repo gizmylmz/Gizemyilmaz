@@ -1,0 +1,179 @@
+
+body {
+  background: linear-gradient(145deg, #393E46, #222831);
+  font-family: 'Roboto', sans-serif;
+  color: #EEEEEE;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+.App {
+  text-align: center;
+  display: block;
+  width: 100%; padding: 50px;
+  max-width: 700px;
+  background: linear-gradient(135deg, #282C34, #393E46);
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  transform: rotateX(5deg) rotateY(-3deg);
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: rotateX(5deg) rotateY(-3deg) translateY(0);
+  }
+  50% {
+    transform: rotateX(5deg) rotateY(-3deg) translateY(-10px);
+  }
+}
+
+input {
+  border-radius: 15px; 
+  padding: 12px 20px;
+  border: none;
+  font-size: 20px;
+  background: linear-gradient(145deg, #393E46, #222831);
+  color: #EEEEEE;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4), -5px -5px 15px rgba(60, 60, 60, 0.2);
+  transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+button  {
+  border-radius: 15px; 
+  margin: 15px;
+  padding: 12px 20px;
+  border:#00CED1;
+  font-size: 16px;
+  background: linear-gradient(145deg, #393E46, #222831);
+  color: #EEEEEE;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4), -5px -5px 15px rgba(60, 60, 60, 0.2);
+  transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+input:focus, button:hover {
+  background: linear-gradient(145deg, #00ADB5, #00CED1);
+  color: #222831;
+  box-shadow: 0 10px 20px rgba(0, 173, 181, 0.4);
+  transform: translateY(-2px);
+}
+
+.input-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  margin-bottom: 40px;
+}
+
+.input-container input {
+  flex: 1 1 60%;
+  min-width: 200px;
+  padding: 12px 20px;
+  background: #282C34;
+  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.4), inset -2px -2px 5px rgba(60, 60, 60, 0.2);
+}
+
+.input-container button {
+  flex: 1 1 30%;
+  min-width: 120px;
+  background: linear-gradient(135deg, #00ADB5, #007F8C);
+}
+
+h1 {
+  color: #00ADB5;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin-top: 100px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+  color: #00ADB5;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin-top: 100px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+h3 {
+  color: #00ADB5;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin-top: 100px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+p {
+  color: #d20f0f;
+  font-size: 1.5rem;
+  margin: 15px 0; 
+  line-height: 1.8;
+  text-align: justify;
+}
+
+.weather-cold {
+  background-image: url('/snow.png');
+  background-size: cover;
+  background-size: 30%;
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  
+}
+
+.weather-cool {
+  
+  background-image: url('/cloody.png');
+  background-size: cover;
+  background-size: 30%;
+  background-repeat: no-repeat;
+  background-position: bottom right;
+}
+
+.weather-warm {
+  background-image: url('/sunny.png');
+  background-size: cover;
+  background-size: 30%;
+  background-repeat: no-repeat;
+  background-position: bottom right;
+}
+
+.weather-hot {
+  background-image: url('/sunny.png');
+  background-size: cover;
+  background-size: 30%;
+  background-repeat: no-repeat;
+  background-position: bottom right;
+}
+
+button:active {
+  transform: translateY(2px);
+  box-shadow: 0 5px 10px rgba(0, 173, 181, 0.3);
+}
+.time {
+  font-size: 1.5rem; 
+  font-weight: bold;
+  color:#00CED1;
+  background: linear-gradient(145deg, #393E46, #222831);
+  text-align: center;
+  margin-top: 20px; 
+  padding: 20px;
+  border-radius: 15px; 
+  width: 150px; 
+  margin: 20px auto;
+  position: absolute;
+  top: 20px; 
+  left: 50%;
+  transform: translateX(-50%); 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4); 
+  z-index: 10; /* Üstte görünmesi için */
+}
