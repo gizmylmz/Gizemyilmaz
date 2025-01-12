@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Şık Daireler</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb);
+        }
+
+        canvas {
+            border: 5px solid #ff4081;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            background: #fff;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        canvas:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <canvas id="myCanvas" width="550" height="550"></canvas>
+
+    <script>
+        const canvas = document.getElementById('myCanvas');
+        const ctx = canvas.getContext('2d');
+
+        const circleRadius = 25; // Daire çapı
+        const rows = 10; // Satır sayısı
+        const cols = 10; // Sütun sayısı
+
+        // Daha canlı renkler için renk paleti
+        function randomColor() {
+            const colors = ['#FF1744', '#F50057', '#D500F9', '#651FFF', '#3D5AFE', '#2979FF', '#00B0FF', '#00E5FF', '#1DE9B6', '#00E676'];
+            return colors[Math.floor(Math.random() * colors.length)];
+        }
+
+        // Daireleri çiz
+        for (let row = 0; row < rows; row++) {
+            for (let col = 0; col < cols; col++) {
+                const x = col * (circleRadius * 2.5) + circleRadius; // X konumu
+                const y = row * (circleRadius * 2.5) + circleRadius; // Y konumu
+                const baseColor = randomColor(); // Rastgele renk
+
+                // Daire gölge ayarları
+                ctx.shadowColor = 'rgba(0, 0, 0, 0.2)';
+                ctx.shadowBlur = 8;
+                ctx.shadowOffsetX = 2;
+                ctx.shadowOffsetY = 2;
+
+                // Daireyi çizin
+                ctx.fillStyle = baseColor; // Daireye renk ver
+                ctx.beginPath();
+                ctx.arc(x, y, circleRadius, 0, Math.PI * 2); // Daireyi çiz
+                ctx.fill();
+                ctx.closePath();
+            }
+        }
+    </script>
+</body>
+</html>
+
